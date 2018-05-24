@@ -1,0 +1,13 @@
+version: '2'
+services:
+  tns:
+    build:
+      context: .
+      args:
+        ANDROID_SDK_URL: "https://dl.google.com/android/repository/tools_r25.2.5-linux.zip"
+        ANDROID_SYSTEM_PACKAGE: "android-26"
+        ANDROID_BUILD_TOOLS_PACKAGE: "build-tools-26.0.2"
+    privileged: true
+    working_dir: /home/tns
+    volumes:
+      - ./:/home/tns
