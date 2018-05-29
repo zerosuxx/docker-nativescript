@@ -5,7 +5,10 @@ MAINTAINER Tamas Mohos <tomi@mohos.name>
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
-RUN $ANDROID_HOME/tools/bin/sdkmanager --verbose "tools" "platform-tools" "platforms;android-26" "build-tools;26.0.2" "extras;android;m2repository" "extras;google;m2repository"
+ARG ANDROID_SYSTEM_PACKAGE_VERSION
+ARG ANDROID_BUILD_TOOLS_PACKAGE_VERSION
+
+RUN $ANDROID_HOME/tools/bin/sdkmanager --verbose "tools" "platform-tools" "platforms;android-$ANDROID_SYSTEM_PACKAGE_VERSION" "build-tools;$ANDROID_BUILD_TOOLS_PACKAGE_VERSION" "extras;android;m2repository" "extras;google;m2repository"
 
 USER root
 RUN apt-get update \
@@ -18,5 +21,7 @@ RUN npm install -g nativescript --unsafe-perm
 
 RUN apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+EXPOSE 40000
 
 CMD ["/docker-entrypoint.sh"]
