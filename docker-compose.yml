@@ -6,7 +6,7 @@ services:
       args:
         ANDROID_SYSTEM_PACKAGE_VERSION: "26"
         ANDROID_BUILD_TOOLS_PACKAGE_VERSION: "26.0.2"
-    image: zerosuxx/docker-nativescript:latest
+    image: zerosuxx/docker-nativescript:android-26_tns-41
     privileged: true
     network_mode: host
     working_dir: /home/tns
