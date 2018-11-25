@@ -1,14 +1,16 @@
-version: '2'
+version: '3'
 services:
   tns:
     build:
       context: .
       args:
-        ANDROID_SYSTEM_PACKAGE_VERSION: "26"
-        ANDROID_BUILD_TOOLS_PACKAGE_VERSION: "26.0.2"
-    image: zerosuxx/docker-nativescript:android-26_tns-41
+        ANDROID_SYSTEM_PACKAGE_VERSION: "28"
+        ANDROID_BUILD_TOOLS_PACKAGE_VERSION: "28.0.2"
+        NODE_VERSION: "11.2.0"
+        GRADLE_VERSION: "4.10.2"
+        ANDROID_SDK_ZIP_VERSION: "4333796"
+    image: zerosuxx/docker-nativescript:latest
+    volumes:
+    - ./:/home/user/project
     privileged: true
     network_mode: host
-    working_dir: /home/tns
-    volumes:
-      - ./:/home/tns
