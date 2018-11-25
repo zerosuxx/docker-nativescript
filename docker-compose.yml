@@ -9,7 +9,7 @@ services:
         NODE_VERSION: "11.2.0"
         GRADLE_VERSION: "4.10.2"
         ANDROID_SDK_ZIP_VERSION: "4333796"
-    image: zerosuxx/docker-nativescript:latest
+    image: zerosuxx/nativescript:latest
     volumes:
     - ./:/home/user/project
     privileged: true
