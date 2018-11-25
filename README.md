@@ -1,6 +1,6 @@
 # docker-nativescript
 
-dependecies:
+dependencies:
 ```
 jdk 8
 node 11.2.0
