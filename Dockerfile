@@ -10,7 +10,7 @@ ARG GRADLE_VERSION="4.10.2"
 ARG ANDROID_SDK_ZIP_VERSION="4333796"
 
 # Set up environment variables
-ENV ANDROID_HOME="/home/user/android-sdk-linux" \
+ENV ANDROID_HOME="/root/android-sdk-linux" \
     SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_ZIP_VERSION}.zip" \
     GRADLE_URL="https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip"
 
