@@ -35,11 +35,6 @@ RUN npm config set unsafe-perm true \
     && tns usage-reporting disable \
     && tns error-reporting disable
 
-# Create a non-root user
-RUN useradd -m user
-USER user
-WORKDIR /home/user
-
 # Download Android SDK
 RUN mkdir "${ANDROID_HOME}" .android \
     && cd "${ANDROID_HOME}" \
