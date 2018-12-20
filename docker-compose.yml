@@ -3,14 +3,8 @@ services:
   tns:
     build:
       context: .
-      args:
-        ANDROID_SYSTEM_PACKAGE_VERSION: "28"
-        ANDROID_BUILD_TOOLS_PACKAGE_VERSION: "28.0.2"
-        NODE_VERSION: "11.2.0"
-        GRADLE_VERSION: "4.10.2"
-        ANDROID_SDK_ZIP_VERSION: "4333796"
     image: zerosuxx/nativescript:latest
     volumes:
-    - ./:/home/user/project
+    - ./:/root/project
     privileged: true
     network_mode: host

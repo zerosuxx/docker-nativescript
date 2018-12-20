@@ -60,5 +60,5 @@ RUN ${ANDROID_HOME}/tools/bin/sdkmanager \
     "tools" "platform-tools" "platforms;android-${ANDROID_SYSTEM_PACKAGE_VERSION}" \
     "build-tools;${ANDROID_BUILD_TOOLS_PACKAGE_VERSION}" "extras;android;m2repository" "extras;google;m2repository"
 
-RUN mkdir project
-WORKDIR project
+RUN mkdir /root/project
+WORKDIR /root/project
