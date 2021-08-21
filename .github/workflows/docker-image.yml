@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Login into DockerHub
-      run: echo {{ secrets.DOCKER_PASSWORD }} | docker login --username {{ secrets.DOCKER_USERNAME }} --password-stdin
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username ${{ secrets.DOCKER_USERNAME }} --password-stdin
     - name: Build the Docker image
       run: docker-compose build
     - name: Push the Docker image
