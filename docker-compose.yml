@@ -6,5 +6,6 @@ services:
     image: zerosuxx/nativescript:latest
     volumes:
     - ./:/root/project
+    - /dev/bus/usb:/dev/bus/usb
     privileged: true
     network_mode: host
